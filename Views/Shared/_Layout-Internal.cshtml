@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Rochester Math and Science Academy</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+   
+
+</head>
+<body>
+
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li> @Html.ActionLink("Home", "Index") </li>
+                    <li> @Html.ActionLink("About Us", "About") </li>
+                    <li> @Html.ActionLink("Parents", "Parents") </li>
+                    <li> @Html.ActionLink("Contact Us", "Contact") </li>
+                    <li> @Html.ActionLink("Principal’s Corner", "Principal") </li>
+                    <li> @Html.ActionLink("Staff Members", "Staff") </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <a href="/home">
+                    <img src="~/Content/Images/Rochester_blue_300.png" />
+                   
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    Call us today! 507-252-5995
+                </div>
+                <div class="row">
+                    <div class="alert alert-warning">
+                        <strong>
+                            Due to weather school is canceled for Friday, February 21
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--content -->
+        @RenderBody()
+
+
+
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Rochester Math and Science Academy  2013</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
