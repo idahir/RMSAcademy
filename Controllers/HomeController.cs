@@ -40,6 +40,17 @@ namespace RMSAcademy.Controllers
         {
             return View();
         }
-   
+         public ActionResult FAQ()
+        {
+             return View();
+        }
+        public ActionResult Links()
+        {
+            return View();
+        }
+        public ActionResult Error()
+        {
+            return View();
+        }
     }
 }
