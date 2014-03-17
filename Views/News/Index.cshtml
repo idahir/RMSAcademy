@@ -1,0 +1,26 @@
+﻿@model IEnumerable<RMSAcademy.Models.Announcement>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout-Internal.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+
+@foreach (var item in Model) {
+    
+    <div class="row">
+        <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
+        <p>@Html.DisplayFor(modelItem => item.MessageSummary)</p>
+   
+    </div>
+    <hr />
+
+}
+
