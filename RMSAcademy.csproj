@@ -196,6 +196,7 @@
     <Content Include="Content\heroic-features.css" />
     <Content Include="Content\Images\cute-school-abstract-pattern-26860604.jpg" />
     <Content Include="Content\Images\rmsAddress.png" />
+    <Content Include="Content\Images\RMSCal.png" />
     <Content Include="Content\Images\Rochester_blue_300.png" />
     <Content Include="Content\Images\Rochester_green_300.png" />
     <Content Include="Content\Images\Rochester_orange_200.png" />
@@ -225,6 +226,7 @@
       <DependentUpon>RMSAModel.edmx</DependentUpon>
       <LastGenOutput>RMSAModel.cs</LastGenOutput>
     </Content>
+    <Content Include="App_Data\ELLProgramMasterDocumentRMSAGOTEAM.pdf" />
     <None Include="Properties\PublishProfiles\RMSAcademy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -278,9 +280,13 @@
     <Content Include="Views\News\Details.cshtml" />
     <Content Include="Views\News\Edit.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Home\ELL.cshtml" />
+    <Content Include="Views\Home\Sponsor.cshtml" />
+    <Content Include="Views\Home\Board.cshtml" />
+    <Content Include="Views\Home\Calendar.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="PDF\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
