@@ -45,12 +45,40 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.3\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.3\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.3\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>..\packages\WindowsAzure.Storage.4.3.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Spatial, Version=5.6.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.6.3\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -97,10 +125,6 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <Private>True</Private>
-      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
@@ -165,28 +189,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Announcement.cs">
-      <DependentUpon>RMSAModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RMSAModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RMSAModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RMSAModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RMSAModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RMSAModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RMSAModel.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Staff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -195,8 +201,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\heroic-features.css" />
     <Content Include="Content\Images\cute-school-abstract-pattern-26860604.jpg" />
+    <Content Include="Content\Images\MDElogo.png" />
+    <Content Include="Content\Images\RMSACalendar2.PNG" />
     <Content Include="Content\Images\rmsAddress.png" />
-    <Content Include="Content\Images\RMSCal.png" />
+    <Content Include="Content\Images\RMSCalendar.PNG" />
     <Content Include="Content\Images\Rochester_blue_300.png" />
     <Content Include="Content\Images\Rochester_green_300.png" />
     <Content Include="Content\Images\Rochester_orange_200.png" />
@@ -209,25 +217,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\RMSAModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>RMSAModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\RMSAModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RMSAModel.edmx</DependentUpon>
-      <LastGenOutput>RMSAModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\RMSAModel.edmx.diagram">
-      <DependentUpon>RMSAModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\RMSAModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RMSAModel.edmx</DependentUpon>
-      <LastGenOutput>RMSAModel.cs</LastGenOutput>
-    </Content>
     <Content Include="App_Data\ELLProgramMasterDocumentRMSAGOTEAM.pdf" />
-    <None Include="Properties\PublishProfiles\RMSAcademy.pubxml" />
+    <Content Include="Docs\StaffContactInformation.xlsx" />
+    <None Include="Properties\PublishProfiles\rmsacademy - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\rmsacademy - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -284,6 +277,9 @@
     <Content Include="Views\Home\Sponsor.cshtml" />
     <Content Include="Views\Home\Board.cshtml" />
     <Content Include="Views\Home\Calendar.cshtml" />
+    <Content Include="Views\Home\Documents.cshtml" />
+    <Content Include="Views\Home\SchoolNews.cshtml" />
+    <Content Include="Views\Home\Staff - Copy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PDF\" />
