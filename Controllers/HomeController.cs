@@ -185,6 +185,11 @@ namespace RMSAcademy.Controllers
             return View();
         }
 
+        public ActionResult MCASchedule()
+        {
+            return View();
+        }
+
  
     }
 

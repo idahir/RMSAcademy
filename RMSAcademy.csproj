@@ -200,7 +200,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\heroic-features.css" />
+    <Content Include="Content\Images\2015Calendar.png" />
     <Content Include="Content\Images\cute-school-abstract-pattern-26860604.jpg" />
+    <Content Include="Content\Images\MCACalendar.PNG" />
     <Content Include="Content\Images\MDElogo.png" />
     <Content Include="Content\Images\RMSACalendar2.PNG" />
     <Content Include="Content\Images\rmsAddress.png" />
@@ -280,6 +282,7 @@
     <Content Include="Views\Home\Documents.cshtml" />
     <Content Include="Views\Home\SchoolNews.cshtml" />
     <Content Include="Views\Home\Staff - Copy.cshtml" />
+    <Content Include="Views\Home\MCASchedule.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PDF\" />

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using RMSAcademy.Controllers
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -34,7 +35,7 @@
                             <li> @Html.ActionLink("Principal’s Corner", "Principal") </li>
                             <li> @Html.ActionLink("FAQ", "FAQ") </li>
                             <li> @Html.ActionLink("Documents & Policies", "Documents") </li>
-                         
+
                             <li> @Html.ActionLink("Contact Us", "Contact") </li>
                             <li> @Html.ActionLink("School News", "SchoolNews") </li>
                         </ul>
@@ -46,7 +47,7 @@
                     <li> @Html.ActionLink("ELL", "ELL") </li>
                     <li> @Html.ActionLink("Sponsor", "Sponsor") </li>
                     <li> @Html.ActionLink("Calendar", "Calendar") </li>
-                   
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -56,15 +57,23 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-7">
                 <a href="/home">
                     <img src="~/Content/Images/Rochester_blue_300.png" />
-                   
                 </a>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-5">
                 <div class="row">
                     Call us today! 507-252-5995
+                </div>
+
+                <div class="row">
+                    <div class="alert alert-info">
+                        <strong>
+                            Rochester Math and Science Academy
+                            <a href="@Url.Action("Calendar")">Calendar 2015-2016</a>
+                        </strong>
+                    </div>
                 </div>
                 <!--
                 <div class="row">
