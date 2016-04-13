@@ -4,13 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Microsoft.Office.Interop.Excel;
-using System.Diagnostics;
-using RMSAcademy.Models;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Auth;
-using Microsoft.WindowsAzure.Storage.Blob;
-using Microsoft.WindowsAzure;
+
 
 namespace RMSAcademy.Controllers
 {
@@ -186,6 +180,11 @@ namespace RMSAcademy.Controllers
         }
 
         public ActionResult MCASchedule()
+        {
+            return View();
+        }
+
+        public ActionResult GiftOfEducation()
         {
             return View();
         }

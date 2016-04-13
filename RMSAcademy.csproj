@@ -23,6 +23,15 @@
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
     <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -204,6 +213,7 @@
     <Content Include="Content\Images\cute-school-abstract-pattern-26860604.jpg" />
     <Content Include="Content\Images\MCACalendar.PNG" />
     <Content Include="Content\Images\MDElogo.png" />
+    <Content Include="Content\Images\RMSA2016Calendar.PNG" />
     <Content Include="Content\Images\RMSACalendar2.PNG" />
     <Content Include="Content\Images\rmsAddress.png" />
     <Content Include="Content\Images\RMSCalendar.PNG" />
@@ -223,6 +233,7 @@
     <Content Include="Docs\StaffContactInformation.xlsx" />
     <None Include="Properties\PublishProfiles\rmsacademy - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\rmsacademy - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\rmsacademy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -283,6 +294,7 @@
     <Content Include="Views\Home\SchoolNews.cshtml" />
     <Content Include="Views\Home\Staff - Copy.cshtml" />
     <Content Include="Views\Home\MCASchedule.cshtml" />
+    <Content Include="Views\Home\GiftOfEducation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PDF\" />

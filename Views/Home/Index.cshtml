@@ -2,60 +2,88 @@
     ViewBag.Title = "Home Page";
 }
 
+
 <div class="row">
+    <div class="col-md-7">
+        <img src="~/Content/Images/MDElogo.png" />
+        <h2>2014-2015 Celebration Eligible School List</h2>
+        <p>
+            Rochester Math and Science Academy was selected based on the annual MDE's annual MMR and FR.
+        </p>
+        <p>
+            The Multiple Measurements Rating (MMR) is a 0 to 100% for all schools in the state and includes data on proficiency, growth, achievement
+            gap reduction, and graduation rates. The Focus Rating (FR) is a 0 to 100% for all schools in the state and includes data on proficiency and
+            growth for only students of color, special education students, students in poverty and English learners.
+        </p>
+        <table class="table table-striped table-bordered table-condensed table-hover">
+            <thead>
+                <tr>
+                    <th>School Name</th>
+                    <th>MMR</th>
+                    <th>FR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="success">
+                    <td>ROCHESTER MATH AND SCIENCE ACADEMY</td>
+                    <td>62.33%</td>
+                    <td>77.64%</td>
+                </tr>
+            </tbody>
+        </table>
 
+        <h2>
+            Mission Statement
+        </h2>
 
-    <img src="~/Content/Images/MDElogo.png" />
-    <h2>2014-2015 Celebration Eligible School List</h2>
-    <p>
-        Rochester Math and Science Academy was selected based on the annual MDE's annual MMR and FR.
-    </p>
-    <p>
-        The Multiple Measurements Rating (MMR) is a 0 to 100% for all schools in the state and includes data on proficiency, growth, achievement
-        gap reduction, and graduation rates. The Focus Rating (FR) is a 0 to 100% for all schools in the state and includes data on proficiency and
-        growth for only students of color, special education students, students in poverty and English learners.
-    </p>
-    <table class="table table-striped table-bordered table-condensed table-hover">
-        <thead>
-            <tr>
-                <th>School Name</th>
-                <th>MMR</th>
-                <th>FR</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="success">
-                <td>ROCHESTER MATH AND SCIENCE ACADEMY</td>
-                <td>62.33%</td>
-                <td>77.64%</td>
-            </tr>
-        </tbody>
-    </table>
+        <p>
+            Our mission is to maximize opportunities for children through educational innovations that will
+            ensure their full development as healthy and positive contributors to the greater community.
+        </p>
+        <h2>Vision Statement</h2>
+        <p>
 
-    <h2>
-        Mission Statement
-    </h2>
+            The school’s vision will meet the distinct needs of our newly arrived student population.
+            Rochester Math and Science Academy (RMSA) will create a supportive family teaching community
+            that utilizes shared ideals, goals and experiences as a major tool for fostering a comprehensive and challenging education.
+            Our vision is to meet the distinct needs of Rochester’s diverse student population.
+            We will use projects and mentorships to integrate learning, encourage daily reading and writing,
+            and motivate academic achievement. Rochester Math and Science Academy will place the student at the
+            center of a diverse and mutually respectful educational community of teachers, parents,
+            inter-generational community volunteers, and experienced teachers who will all act as
+            guidance counselors and student advocates. We will encourage and assist parents
+            and other adults to reinforce student academic performance through extensive student writing and
+            reading. We will work to foster character, initiative, leadership, problem solving, critical thinking,
+            teamwork, and communication as well as academic skills in math/science/technology, the humanities, and communication.
+        </p>
+    </div>
+    <div class="col-md-5">
+        <div class="row">
+            <h2>News / Events</h2>
+            <hr />
+            <iframe width="450" height="300" src="https://www.youtube.com/embed/1ti-U6W5LnU" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="row">
+            <h2>PRINCIPAL'S CORNER</h2>
+            <hr />
+            <ul class="list-unstyled">
+                <li><a href="@Url.Action("Principal","Home")"><i class="fa fa-arrow-circle-right"></i> Principal Message 2016</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <h2>Links</h2>
+            <hr />
+            <ul class="list-unstyled">
+                <li><a href="@Url.Action("Calendar", "Home")"><i class="fa fa-arrow-circle-right"></i> RMSA Calendar 2015-2016</a></li>
+                <li><a href="@Url.Action("Board", "Home")"><i class="fa fa-arrow-circle-right"></i> School Board</a></li>
+                <li><a href="@Url.Action("Sponsor", "Home")"><i class="fa fa-arrow-circle-right"></i> Sponsor Information</a></li>
+                <li><a href="@Url.Action("Staff", "Home")"><i class="fa fa-arrow-circle-right"></i> Staff Members</a></li>
+                <li><a href="@Url.Action("Documents", "Home")"><i class="fa fa-arrow-circle-right"></i> Documents & Policies</a></li>
+            </ul>
+            
+        </div>
 
-    <p>
-        Our mission is to maximize opportunities for children through educational innovations that will
-        ensure their full development as healthy and positive contributors to the greater community.
-    </p>
-    <h2>Vision Statement</h2>
-    <p>
-
-        The school’s vision will meet the distinct needs of our newly arrived student population.
-        Rochester Math and Science Academy (RMSA) will create a supportive family teaching community
-        that utilizes shared ideals, goals and experiences as a major tool for fostering a comprehensive and challenging education.
-        Our vision is to meet the distinct needs of Rochester’s diverse student population.
-        We will use projects and mentorships to integrate learning, encourage daily reading and writing,
-        and motivate academic achievement. Rochester Math and Science Academy will place the student at the
-        center of a diverse and mutually respectful educational community of teachers, parents,
-        inter-generational community volunteers, and experienced teachers who will all act as
-        guidance counselors and student advocates. We will encourage and assist parents
-        and other adults to reinforce student academic performance through extensive student writing and
-        reading. We will work to foster character, initiative, leadership, problem solving, critical thinking,
-        teamwork, and communication as well as academic skills in math/science/technology, the humanities, and communication.
-    </p>
+    </div>
 
 </div>
 <!-- /.row -->

@@ -47,3 +47,6 @@ input[type="checkbox"].input-validation-error {
     padding:5px;
 
 }
+.boardMembers span {
+    font-weight: 900;
+}
